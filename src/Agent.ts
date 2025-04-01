@@ -28,7 +28,7 @@ export default class Agent {
                 for (const tool of toolCall) {
                     const toolName = tool.function.name
                     const toolArgs = JSON.parse(tool.function.arguments)
-                    console.log(`${toolName} -> ${toolArgs}`)
+                    console.log(`${toolName} -> ${tool.function.arguments}`)
                     const toolResult = await this.tools.find(t => t.name === toolName)?.execute(toolArgs) // 工具调用
                     console.log('Observation: ', toolResult) // 工具执行结果
                     observation += `Observation: ${toolResult}`

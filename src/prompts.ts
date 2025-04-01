@@ -19,6 +19,4 @@ Observation: Australia is a country. The capital is Canberra.
 You then output:
 
 Answer: The capital of Australia is Canberra
-
-遇到数学问题,你必须通过调用计算器来完成计算
 `;

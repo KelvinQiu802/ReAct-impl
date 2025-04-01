@@ -6,7 +6,7 @@ async function main() {
     const tools: Tool[] = [new Calculator()]
     const agent = new Agent(tools)
 
-    const query = '1+2+3+4+(5*6)+9 等于多少?' // 49
+    const query = `(48÷6+7)×(15−9)−5×(3+2)` // 65
     agent.query(query)
 }
 
