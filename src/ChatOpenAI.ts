@@ -19,8 +19,8 @@ export default class ChatOpenAI {
         }];
     }
 
-    async chat(query: string) {
-        this.messages.push({ role: 'user', content: query })
+    async chat(dialogues: OpenAI.Chat.ChatCompletionMessageParam[]) {
+        this.messages.push(...dialogues)
         const response = await this.llm.chat.completions.create({
             model: process.env.OPENAI_MODEL as string,
             messages: this.messages,
